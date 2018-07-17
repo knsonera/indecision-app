@@ -1,0 +1,19 @@
+{
+  "name": "indecision-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "knsonera",
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1",
+    "eslint-config-defaults": "9.0.0",
+    "global": "^4.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-react": "^7.10.0"
+  }
+}

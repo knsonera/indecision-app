@@ -5,13 +5,21 @@ import AddOption from './AddOption';
 
 const Options = (props) => (
     <div>
-        <p>Here are your options:</p>
-        {props.options.length === 0 && <p>Please add options to get started!</p>}
+        <div className="widget-header">
+            <h3 className="widget-header__title">Your options</h3>
+            <button 
+                className="button button--link" 
+                onClick={props.handleDeleteOptions}>
+                Remove All
+            </button>
+        </div>
+        {props.options.length === 0 && <p className=".widget-header__message">Please add options to get started!</p>}
         {
-            props.options.map((option) =>
+            props.options.map((option, index) =>
                 <Option 
                     key={option} 
                     title={option} 
+                    count={index+1}
                     handleDeleteOption={props.handleDeleteOption}
                 />
             )
@@ -20,7 +28,7 @@ const Options = (props) => (
             handleAddOption={props.handleAddOption}
         />
         <p></p>
-        <button onClick={props.handleDeleteOptions}>Remove All</button>
+        
     </div>
 );
 

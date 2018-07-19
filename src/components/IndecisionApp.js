@@ -40,13 +40,11 @@ class IndecisionApp extends React.Component {
         this.setState(() => ({ options: [] }));
     }
 
-    handleDeleteOption(optionToRemove) {
+    handleDeleteOption = (optionToRemove) => {
         this.setState((prevState) => ({
-            options: prevState.options.filter((option) => {
-                return optionToRemove !== option;
-            })
+          options: prevState.options.filter((option) => optionToRemove !== option)
         }));
-    }
+      };
 
     handleAddOption = (option) => {
         if (!option) {
@@ -79,7 +77,7 @@ class IndecisionApp extends React.Component {
         return (
             <div>
                 <Header subtitle={subtitle} />
-                <div className="container">
+                <div className="container widget">
                     <Action
                         hasOptions={this.state.options.length > 1}
                         handlePick={this.handlePick}
